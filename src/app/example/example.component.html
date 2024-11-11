@@ -1,0 +1,10 @@
+<h2>Welcome to Example Component!</h2>
+<p>This is custom component created in Angular.</p>
+<p>{{message}}</p>
+<!-- If tired == true this p will be shown -->
+<p *ngIf="tired">Let's have a break</p>
+<ul>
+    <!-- ngFor will go through each item in scores array and show it -->
+    <li *ngFor="let score of scores">{{score}}</li>
+</ul>
+<button (click)="sayHello()">Say Hello</button>

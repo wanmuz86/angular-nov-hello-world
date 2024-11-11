@@ -1,0 +1,10 @@
+<h2>Counter</h2>
+<p>{{counter}}</p>
+<!-- The message should show number cannot be 
+less than 0 when user press decrement on 0 -->
+<!-- After that if user press increment or reset message will go away -->
+<p style="color: red;">{{message}}</p>
+<button (click)="increment()">Increment</button>
+<!-- property binding [] => change the property/ behaviour of a HTMl tag on a certain condition -->
+<button (click)="decrement()" [disabled]="counter==0">Decrement</button>
+<button (click)="reset()" [disabled]="counter==0">Reset</button>
