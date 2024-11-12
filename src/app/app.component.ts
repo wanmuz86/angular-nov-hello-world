@@ -6,13 +6,13 @@ import { CounterComponent } from "./counter/counter.component";
 import { ChildComponent } from "./child/child.component";
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
+import { ExclamationPipe } from './exclamation.pipe';
 // Decorator - Angular Notation 
 @Component({
   // How to call/ bring out this component
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ExampleComponent, HeaderComponent, CounterComponent, ChildComponent, CommonModule, FormsModule],
+  imports: [RouterOutlet, ExampleComponent, HeaderComponent, CounterComponent, ChildComponent, CommonModule, FormsModule,ExclamationPipe],
   // The UI
   templateUrl: './app.component.html',
   // The Styling
