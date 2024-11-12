@@ -15,7 +15,7 @@ export class ProductListComponent {
   // BUT it is compulsary for JSON (When you work with remote data)
   products: Product[] = [
     {
-      name:"IPhone 16",
+      name:"iPhone 16",
       price:6999.00
     },
     {

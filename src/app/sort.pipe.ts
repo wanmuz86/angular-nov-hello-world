@@ -12,10 +12,10 @@ export class SortPipe implements PipeTransform {
   transform(value: Product[]): Product[] {
     if (value){
       return value.sort((a:Product, b:Product)=>{
-        if (a.name < b.name){
+        if (a.name.toLocaleLowerCase() < b.name.toLocaleLowerCase()){
           return -1;
         } 
-        else if (b.name < a.name){
+        else if (b.name.toLocaleLowerCase() < a.name.toLocaleLowerCase()){
           return 1;
         }
           return 0;
