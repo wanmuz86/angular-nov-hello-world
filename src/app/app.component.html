@@ -18,4 +18,21 @@
 
 
    <p *ngIf="messageFromChild != ''">Message received: {{messageFromChild}}</p>
+   <hr/>
+   <h2>{{title}}</h2>
+
+   <p>Original date: {{currentDate}}</p>
+   <p>Formatted date: {{currentDate | date:'fullDate'}} - {{currentDate|date:'shortTime'}}</p>
+
+   <hr/>
+   <p>Original Price: {{amount}}</p>
+   <!-- USD currency, Symbol '$' 1.2-2 ( . and , formatting)  -->
+   <p>Formatted Price: {{amount | currency:'USD':'symbol':'1.2-2'}}
+   </p>
+   <hr>
+   <p>Original text: {{text}}</p>
+   <p>Uppercase: {{text | uppercase}}</p>
+   <p>Lowecase: {{text | lowercase}} </p>
+
+
 </main>

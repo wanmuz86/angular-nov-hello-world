@@ -26,6 +26,14 @@ export class AppComponent implements OnInit{
  message = "Hello from parent"
  messageFromChild = "";
 
+
+ /// Pipe lab
+ title = "Angular Pipe Example";
+ currentDate = new Date();
+ amount = 1234.56;
+ text = 'Angular Pipes are AWESOME!!'
+
+
 // Function that will be invoked when there is a message passed from child to parent
  receiveMessage(message:string){
 // I will assign the message passed to messageFromChild
