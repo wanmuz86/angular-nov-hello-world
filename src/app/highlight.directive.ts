@@ -1,3 +1,4 @@
+import { HostListener } from "@angular/core";
 import { Directive, ElementRef, Renderer2, OnInit, Input } from '@angular/core';
 
 // ElementRef - refer to the HTML element calling the directive
@@ -25,7 +26,19 @@ export class HighlightDirective implements OnInit{
     //when the directive is used, change the colour of el to yellow
     // this.renderer - to help change the style
     // this.el -> p
+    // this.renderer.setStyle(this.el.nativeElement, 'backgroundColor',this.appHighlight);
+  }
+
+
+  // When the mouse entered the element, highlight to blue
+  @HostListener('mouseenter') mouseEnter(){
     this.renderer.setStyle(this.el.nativeElement, 'backgroundColor',this.appHighlight);
   }
 
+  // Mouse leave, remove the highlight
+  @HostListener('mouseleave') mouseLeave(){
+    this.renderer.setStyle(this.el.nativeElement, 'backgroundColor','');
+  }
+
+  
 }
