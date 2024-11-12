@@ -7,4 +7,12 @@
     <app-example></app-example>
     <hr/>
     <app-counter></app-counter>
+    <hr/>
+    <h2>Parent-Child Component communication</h2>
+    <!-- the first [message] refer to the @Input in child. the second message is our variable -->
+    <!--  When the (messageEvent) is invoked by child, the receiveMessage($event) function will be called -->
+    <!-- with paremeter $event from where we can retrieve the passed message -->
+   <app-child [message]="message" (messageEvent)="receiveMessage($event)"></app-child>
+   
+   <p *ngIf="messageFromChild != ''">Message received: {{messageFromChild}}</p>
 </main>

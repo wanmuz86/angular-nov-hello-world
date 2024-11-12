@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './example.component.css'
 })
 export class ExampleComponent {
-  
+
   // Implicit declaration
   // I don't specify the type
   // Angular/Typescript will define the type based on initial value
@@ -20,9 +20,13 @@ export class ExampleComponent {
   tired:boolean = true;
   scores:number[] = [30,50,70,100,80]
 
-  sayHello(){
+  // Function with return type void - no return just execution
+  sayHello() : void{
     alert("Hello World");
   
   }
-
+  // Function that will take a (number), b (number) and return number
+  calculate(a:number,b:number) : number {
+    return a+b;
+  }
 }
