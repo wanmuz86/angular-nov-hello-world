@@ -7,12 +7,13 @@ import { ChildComponent } from "./child/child.component";
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ExclamationPipe } from './exclamation.pipe';
+import { ProductListComponent } from "./product-list/product-list.component";
 // Decorator - Angular Notation 
 @Component({
   // How to call/ bring out this component
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ExampleComponent, HeaderComponent, CounterComponent, ChildComponent, CommonModule, FormsModule,ExclamationPipe],
+  imports: [RouterOutlet, ExampleComponent, HeaderComponent, CounterComponent, ChildComponent, CommonModule, FormsModule, ExclamationPipe, ProductListComponent],
   // The UI
   templateUrl: './app.component.html',
   // The Styling

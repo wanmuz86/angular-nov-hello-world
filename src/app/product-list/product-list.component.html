@@ -1,0 +1,12 @@
+<div>
+    <h2>Product List</h2>
+    <ul>
+        <!-- Best practice: array is plural  -->
+        <!-- Normally when you ngFor let "singular" of "plural" -->
+        <!-- Slice from 1 until 3 not including 3 -->
+        <li *ngFor="let product of products | sort">
+        {{product.name}} - {{product.price | currency:'USD'}}
+
+        </li>
+    </ul>
+</div>
